@@ -5,13 +5,10 @@ const app = express();
 app.set('view engine', 'pug');
 app.set('views' , 'views');
 
+//Operations
 const array = [];
 for (let i = 1; i<= 50; i++) {
-  if (i % 2 == 0) {
-    array.push(`${i} Soy Par!`)
-  } else {
-    array.push(`${i} Soy Impar!`)
-  };
+  array.push(`${i} Soy ${i % 2 == 0 ? 'Par' : 'Impar'}!`);
 };
 
 //Ruta
